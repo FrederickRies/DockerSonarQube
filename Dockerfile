@@ -1,4 +1,4 @@
-FROM sonarqube:7.7-community
-COPY bootstrap.sh .
-RUN chmod +x ./bootstrap.sh
-ENTRYPOINT ["./bootstrap.sh"]
+FROM sonarqube:7.0-alpine
+COPY bootstrap.sh ./bin
+RUN chmod +x ./bin/bootstrap.sh
+ENTRYPOINT ["./bin/bootstrap.sh"]
